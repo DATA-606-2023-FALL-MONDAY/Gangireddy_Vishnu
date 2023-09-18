@@ -48,7 +48,8 @@ Describe the datasets you are using to answer your research questions.
   - Data type
   - Defition
   - Potential values (for categorical valuables, what are the categories?)
-  | **Column Name**              | **Data Type** | **Definition**                                          | **Potential Values**                                                                                                     |
+
+| **Column Name**              | **Data Type** | **Definition**                                          | **Potential Values**                                                                                                     |
 |-----------------------------|---------------|--------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
 | `id`                        | `object`      | Unique identifier for each ride.                       | -                                                                                                                         |
 | `timestamp`                 | `float64`     | Timestamp for the ride.                                | -                                                                                                                         |
