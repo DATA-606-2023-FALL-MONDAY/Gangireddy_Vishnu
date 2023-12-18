@@ -137,12 +137,157 @@ Describe the datasets you are using to answer your research questions.
 
 - Ensuring the dataset is tidy is imperative for effective analysis. Each row represents a unique observation, and each column corresponds to a distinct property of that observation. This tidy format facilitates seamless integration into predictive analysis and machine learning models.
 
-### Conclusion
+### Conclusion for EDA
 
 The EDA phase has provided valuable insights into the dataset, laying the foundation for further analysis and modeling. The clean and enriched dataset, along with meaningful visualizations, sets the stage for predictive analysis and machine learning tasks in the next phases of the project.
 
 
+## Predictive Analytics - Model Training
 
-## 8. References 
+### Models for Predictive Analytics
 
-- https://www.kaggle.com/datasets/brllrb/uber-and-lyft-dataset-boston-ma
+1. **Linear Regression:**
+   - Classic regression model for predicting numerical values.
+   - Utilized features selected based on correlation and significance.
+   - Training and testing split: 80/20.
+   - Evaluated using the R^2 score, achieving a score of 93%.
+
+2. **Neural Network (TensorFlow and Keras):**
+   - Implemented for complex pattern recognition.
+   - Features include continuous and one-hot encoded categorical variables.
+   - Training and testing split: 90/10.
+   - Performance assessed using MSE loss and a custom R^2 score metric. Achieved an R^2 score of 95%.
+
+### Training Methodology
+
+#### Linear Regression
+- **Training Data:** Utilized a subset (`df1`) with selected features and target variable.
+- **Train vs Test Split:** 80% for training, 20% for testing.
+- **Python Packages:** Scikit-learn for Linear Regression.
+- **Development Environment:** Local machine or preferred Python environment.
+
+#### Neural Network (TensorFlow and Keras)
+- **Training Data:** Used the DataFrame `df1` with features and target variable.
+- **Train vs Test Split:** 90% for training, 10% for testing.
+- **Python Packages:** TensorFlow and Keras for building and training.
+- **Development Environment:** Local machine or preferred Python environment.
+
+### Model Performance Evaluation
+
+#### Linear Regression
+- **Metrics:** R^2 score for both training and testing sets.
+- **Evaluation:** Higher R^2 scores indicate better predictive performance. Achieved an R^2 score of 93%.
+
+#### Neural Network
+- **Metrics:** MSE loss and R^2 score during training.
+- **Evaluation:** Trends in MSE and R^2 score provide insights into model performance. Achieved an R^2 score of 95%.
+
+### Model Comparison
+Models compared based on R^2 scores, with the neural network slightly outperforming linear regression in predictive accuracy.
+
+
+## Uber & Lyft Data Exploration with Streamlit
+
+### Introduction
+This project utilizes the Streamlit framework to create an interactive application exploring the relationship between ride prices and weather conditions for Uber and Lyft services in Boston, MA.
+
+### Key Features
+
+- **Multipage Structure:**
+  - Developed a multipage application for a seamless user experience.
+
+- **Styling and Branding:**
+  - Custom styling with HTML and CSS for a visually appealing and consistent brand image.
+
+- **Data Exploration:**
+  - Streamlit components to showcase dataset overviews, including ride details, pricing information, and geographical distribution.
+
+- **Data Visualization:**
+  - Interactive Plotly Express plots for dynamic exploration of ride data, pricing trends, and weather impact.![Visualization](https://github.com/DATA-606-2023-FALL-MONDAY/Gangireddy_Vishnu/blob/main/docs/Images/Observations%20page%20from%20streamlit.png)
+
+- **Machine Learning Model:**
+  - Implemented a neural network regression model for predicting ride prices based on user input.
+![Visualization](https://github.com/DATA-606-2023-FALL-MONDAY/Gangireddy_Vishnu/blob/main/docs/Images/interactive%20price%20prediction%20page%20from%20streamlit.png)
+- **User Interaction:**
+  - User-friendly sidebar for personalized fare estimates by inputting date, time, source, destination, cab type, and weather conditions.
+
+### Insights
+
+- **Balanced Features:**
+  - Explored features like car type and starting position, providing insights into ride counts and distribution patterns.
+
+- **Critical Observations:**
+  - Identified class differences in vehicles, with significant impacts on pricing.
+  - Discovered variations in UberX prices based on different weather conditions and locations.
+
+- **Important Features:**
+  - Highlighted key features, including hour, day, month, distance, surge multiplier, weather-related variables, source, destination, cab type, and name.
+
+- **Neural Network Predictions:**
+  - Implemented a neural network for predicting ride prices, allowing users to input various parameters for personalized fare estimates.
+
+### Future Improvements and Challenges
+
+- **Feature Engineering:**
+  - Suggested future improvements involving additional feature engineering to enhance the predictive power of the model.
+
+- **Handling Location Data:**
+  - Addressed challenges related to handling location data and proposed strategies for converting locations into continuous variables for richer insights.
+
+- **Balancing Features:**
+  - Explored challenges in balancing categorical and continuous features in regression models and suggested avenues for improvement.
+
+### Conclusion for streamlit work
+The Streamlit application provides a comprehensive and interactive platform for users to explore the relationships between ride prices and weather conditions.
+
+
+## Conclusion
+
+### Summary of Work and Potential Application
+
+This project, titled "Analysis of Uber & Lyft ride details," aimed to comprehensively analyze trip details from Uber and Lyft, with a specific focus on understanding the factors influencing ride pricing dynamics and service quality. The project explored the intricate relationship between ride-hailing operations and meteorological factors, shedding light on how weather conditions impact ride costs, durations, and overall customer satisfaction.
+
+#### Significance and Potential Applications
+
+The analysis holds significant potential in various domains:
+
+- **Pricing Transparency:** Providing passengers with insights into how weather conditions affect ride pricing, enhancing transparency and predictability in travel expenditures.
+  
+- **Operational Efficacy:** Enabling ride-hailing companies to better allocate resources and optimize pricing strategies by understanding weather-induced demand patterns.
+
+- **Weather Resilience:** Informing the development of more resilient and adaptive transportation systems by understanding the impact of meteorological conditions on ride durations and routes.
+
+### Limitations
+
+While the project has yielded valuable insights, it is essential to acknowledge its limitations:
+
+- **Data Size:** The dataset's size, around 300 MB, may limit the scalability of certain analyses.
+
+- **Temporal and Spatial Constraints:** The data cover a specific time period (11-26-2018 to 12-18-2018) and location (Uber and Lyft Dataset Boston, MA), potentially limiting generalizability.
+
+### Lessons Learned
+
+Throughout the project, several key lessons were learned:
+
+- **Feature Importance:** Identifying key features, such as cab name, distance, and surge multiplier, through exploratory data analysis and correlation analysis.
+
+- **Model Selection:** The selection of models, such as linear regression and neural networks, requires consideration of simplicity, robustness, and accuracy.
+
+- **Data Tidiness:** Ensuring the dataset's tidiness is crucial for effective analysis and modeling.
+
+### Future Research Direction
+
+Future research can build upon the insights gained in this project:
+
+- **Extended Temporal Analysis:** Examining ride data over more extended periods to identify potential trends and patterns over time.
+
+- **Geographical Expansion:** Expanding the analysis to multiple locations to understand regional variations in the impact of weather on ride-hailing services.
+
+- **Dynamic Pricing Models:** Developing dynamic pricing models that adapt to changing weather conditions in real-time.
+
+
+## References
+
+- [Uber and Lyft Dataset - Kaggle](https://www.kaggle.com/datasets/brllrb/uber-and-lyft-dataset-boston-ma)
+
+
